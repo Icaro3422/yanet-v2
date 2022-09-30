@@ -1,8 +1,30 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBOyu5J_-5gl3KWYywguxLJXn7DfdjxUUo",
+  authDomain: "yanet-v2.firebaseapp.com",
+  projectId: "yanet-v2",
+  storageBucket: "yanet-v2.appspot.com",
+  messagingSenderId: "1019312427698",
+  appId: "1:1019312427698:web:aed2839660d51828712fab",
+  measurementId: "G-P989DRT0WR"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
